@@ -1,1 +1,1 @@
-export const SERVER_URL = 'http://localhost:12314';
+export const SERVER_URL = process.env.VUE_APP_API;
