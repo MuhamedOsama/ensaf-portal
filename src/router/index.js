@@ -14,7 +14,28 @@ const router = new VueRouter({
         return import('../views/Home.vue');
       },
     },
-
+    {
+      path: '/CreateProject',
+      name: 'CreateProject',
+      component: function () {
+        return import('../views/CreateProject.vue');
+      },
+      meta: {
+        public: false, // Allow access to guest user.
+        onlyCommissioner: true,
+      },
+    },
+    {
+      path: '/SubmitClaim',
+      name: 'SubmitClaim',
+      component: function () {
+        return import('../views/SubmitClaim.vue');
+      },
+      meta: {
+        public: false, // Allow access to guest user.
+        onlyNormalUser: true,
+      },
+    },
     {
       path: '/login',
       name: 'login',
@@ -62,11 +83,28 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   const isPublic = to.matched.some((record) => record.meta.public);
+  const onlyCommissioner = to.matched.some(
+    (record) => record.meta.onlyCommissioner
+  );
+  const onlyNormalUser = to.matched.some(
+    (record) => record.meta.onlyNormalUser
+  );
   const onlyWhenLoggedOut = to.matched.some(
     (record) => record.meta.onlyWhenLoggedOut
   );
+  const isNormalUser = !!TokenService.getRoles().includes('Normal');
   const loggedIn = !!TokenService.getToken();
-
+  const isCommissioner = !!TokenService.getRoles().includes('Commissioner');
+  if (onlyCommissioner) {
+    if (!isCommissioner) {
+      return next('/');
+    }
+  }
+  if (onlyNormalUser) {
+    if (!isNormalUser) {
+      return next('/');
+    }
+  }
   if (!isPublic && !loggedIn) {
     // disconnects from socket if connected
 

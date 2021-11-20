@@ -1,15 +1,11 @@
-
-
 <template>
   <v-container>
-    <h1 class="text-center">Welcome</h1>
+    <h1 class="text-center">Only Commissioner Can View This Page.</h1>
   </v-container>
 </template>
 
 <script>
-export default {
-  data: () => ({}),
-};
+export default {};
 </script>
 
 <style>

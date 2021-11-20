@@ -1139,6 +1139,11 @@
     anymatch "^3.0.0"
     source-map "^0.6.0"
 
+"@umalqura/core@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@umalqura/core/-/core-0.0.7.tgz#aedecd67145002db4bab8725de721dd819e07de8"
+  integrity sha512-o8G1J2KRzM/Hal5Taln1QHzhfJsE4+8hQH087Pl6C0ZjPhmw7tjjuejjbgj++Lc2BP4kRDswTJ3J5TuGGybA2Q==
+
 "@vue/babel-helper-vue-jsx-merge-props@^1.2.1":
   version "1.2.1"
   resolved "https://registry.nlark.com/@vue/babel-helper-vue-jsx-merge-props/download/@vue/babel-helper-vue-jsx-merge-props-1.2.1.tgz#31624a7a505fb14da1d58023725a4c5f270e6a81"
@@ -5097,6 +5102,11 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
+libphonenumber-js@^1.7.51:
+  version "1.9.43"
+  resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.9.43.tgz#2371e4383e6780990381d5b900b8c22666221cbb"
+  integrity sha512-tNB87ZutAiAkl3DE/Bo0Mxqn/XZbNxhPg4v9bYBwQQW4dlhBGqXl1vtmPxeDWbrijzwOA9vRjOOFm5V9SK/W3w==
+
 lines-and-columns@^1.1.6:
   version "1.1.6"
   resolved "https://registry.nlark.com/lines-and-columns/download/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
@@ -6454,6 +6464,14 @@ postcss-selector-parser@^6.0.0, postcss-selector-parser@^6.0.2:
     cssesc "^3.0.0"
     util-deprecate "^1.0.2"
 
+postcss-sorting@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/postcss-sorting/-/postcss-sorting-5.0.1.tgz#10d5d0059eea8334dacc820c0121864035bc3f11"
+  integrity sha512-Y9fUFkIhfrm6i0Ta3n+89j56EFqaNRdUKqXyRp6kvTcSXnmgEjaVowCXH+JBe9+YKWqd4nc28r2sgwnzJalccA==
+  dependencies:
+    lodash "^4.17.14"
+    postcss "^7.0.17"
+
 postcss-svgo@^4.0.3:
   version "4.0.3"
   resolved "https://registry.npmmirror.com/postcss-svgo/download/postcss-svgo-4.0.3.tgz?cache=0&sync_timestamp=1635857764553&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fpostcss-svgo%2Fdownload%2Fpostcss-svgo-4.0.3.tgz#343a2cdbac9505d416243d496f724f38894c941e"
@@ -6482,7 +6500,7 @@ postcss-value-parser@^4.0.2, postcss-value-parser@^4.1.0:
   resolved "https://registry.npm.taobao.org/postcss-value-parser/download/postcss-value-parser-4.1.0.tgz#443f6a20ced6481a2bda4fa8532a6e55d789a2cb"
   integrity sha1-RD9qIM7WSBor2k+oUypuVdeJoss=
 
-postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.27, postcss@^7.0.32, postcss@^7.0.36, postcss@^7.0.5, postcss@^7.0.6:
+postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.27, postcss@^7.0.31, postcss@^7.0.32, postcss@^7.0.36, postcss@^7.0.5, postcss@^7.0.6:
   version "7.0.39"
   resolved "https://registry.npmmirror.com/postcss/download/postcss-7.0.39.tgz?cache=0&sync_timestamp=1634821322994&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fpostcss%2Fdownload%2Fpostcss-7.0.39.tgz#9624375d965630e2e1f2c02a935c82a59cb48309"
   integrity sha1-liQ3XZZWMOLh8sAqk1yCpZy0gwk=
@@ -7051,6 +7069,11 @@ schema-utils@^3.0.0:
     ajv "^6.12.5"
     ajv-keywords "^3.5.2"
 
+scrollparent@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/scrollparent/-/scrollparent-2.0.1.tgz#715d5b9cc57760fb22bdccc3befb5bfe06b1a317"
+  integrity sha1-cV1bnMV3YPsivczDvvtb/gaxoxc=
+
 select-hose@^2.0.0:
   version "2.0.0"
   resolved "https://registry.nlark.com/select-hose/download/select-hose-2.0.0.tgz#625d8658f865af43ec962bfc376a37359a4994ca"
@@ -7601,6 +7624,13 @@ strip-json-comments@^3.0.1:
   resolved "https://registry.nlark.com/strip-json-comments/download/strip-json-comments-3.1.1.tgz#31f1281b3832630434831c310c01cccda8cbe006"
   integrity sha1-MfEoGzgyYwQ0gxwxDAHMzajL4AY=
 
+style-helpers@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/style-helpers/-/style-helpers-1.0.2.tgz#3675e327c806a8f2edb56cde3d990dded25e8b31"
+  integrity sha512-1wDr4EsNepPWPWsbr0m7H+4saaJK7+/H+VQqoLTmoaS3A0zXFzoCk+16RLXevnzfunVByFCu7tmyR2tXwzmBGw==
+  dependencies:
+    stylelint-order "^4.0.0"
+
 stylehacks@^4.0.0:
   version "4.0.3"
   resolved "https://registry.nlark.com/stylehacks/download/stylehacks-4.0.3.tgz?cache=0&sync_timestamp=1621449728121&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fstylehacks%2Fdownload%2Fstylehacks-4.0.3.tgz#6718fcaf4d1e07d8a1318690881e8d96726a71d5"
@@ -7609,6 +7639,15 @@ stylehacks@^4.0.0:
     browserslist "^4.0.0"
     postcss "^7.0.0"
     postcss-selector-parser "^3.0.0"
+
+stylelint-order@^4.0.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/stylelint-order/-/stylelint-order-4.1.0.tgz#692d05b7d0c235ac66fcf5ea1d9e5f08a76747f6"
+  integrity sha512-sVTikaDvMqg2aJjh4r48jsdfmqLT+nqB1MOsaBnvM3OwLx4S+WXcsxsgk5w18h/OZoxZCxuyXMh61iBHcj9Qiw==
+  dependencies:
+    lodash "^4.17.15"
+    postcss "^7.0.31"
+    postcss-sorting "^5.0.1"
 
 supports-color@^5.3.0:
   version "5.5.0"
@@ -8172,6 +8211,26 @@ vue-loader@^15.9.2:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
+vue-observe-visibility@^0.4.4:
+  version "0.4.6"
+  resolved "https://registry.yarnpkg.com/vue-observe-visibility/-/vue-observe-visibility-0.4.6.tgz#878cb8ebcf3078e40807af29774e97105ebd519e"
+  integrity sha512-xo0CEVdkjSjhJoDdLSvoZoQrw/H2BlzB5jrCBKGZNXN2zdZgMuZ9BKrxXDjNP2AxlcCoKc8OahI3F3r3JGLv2Q==
+
+vue-phone-number-input@^1.1.12:
+  version "1.1.12"
+  resolved "https://registry.yarnpkg.com/vue-phone-number-input/-/vue-phone-number-input-1.1.12.tgz#bb2c5fa453d0dbfe6d70a666f9db5fd54ce3f7df"
+  integrity sha512-PB2M35ACBczqkQN8d9XxylTt2BJf7A0yORnybNPBhPjgWP+sRAJqyGSFXjQ/byfacUKQn3TRRwEqRtlc1repEQ==
+  dependencies:
+    libphonenumber-js "^1.7.51"
+    style-helpers "^1.0.2"
+    vue "^2.6.11"
+    vue-virtual-scroller "^1.0.10"
+
+vue-resize@^0.4.5:
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/vue-resize/-/vue-resize-0.4.5.tgz#4777a23042e3c05620d9cbda01c0b3cc5e32dcea"
+  integrity sha512-bhP7MlgJQ8TIkZJXAfDf78uJO+mEI3CaLABLjv0WNzr4CcGRGPIAItyWYnP6LsPA4Oq0WE+suidNs6dgpO4RHg==
+
 vue-router@^3.5.3:
   version "3.5.3"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.5.3.tgz#041048053e336829d05dafacf6a8fb669a2e7999"
@@ -8198,6 +8257,15 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.npm.taobao.org/vue-template-es2015-compiler/download/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha1-HuO8mhbsv1EYvjNLsV+cRvgvWCU=
 
+vue-virtual-scroller@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/vue-virtual-scroller/-/vue-virtual-scroller-1.0.10.tgz#fdf243240001f05bd79aa77f2e2e60403760e2fb"
+  integrity sha512-Hn4qSBDhRY4XdngPioYy/ykDjrLX/NMm1fQXm/4UQQ/Xv1x8JbHGFZNftQowTcfICgN7yc31AKnUk1UGLJ2ndA==
+  dependencies:
+    scrollparent "^2.0.1"
+    vue-observe-visibility "^0.4.4"
+    vue-resize "^0.4.5"
+
 vue@^2.6.11:
   version "2.6.14"
   resolved "https://registry.npmmirror.com/vue/download/vue-2.6.14.tgz#e51aa5250250d569a3fbad3a8a5a687d6036e235"
@@ -8211,6 +8279,11 @@ vuetify-loader@^1.7.0:
     decache "^4.6.0"
     file-loader "^6.2.0"
     loader-utils "^2.0.0"
+
+vuetify-umalqura@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/vuetify-umalqura/-/vuetify-umalqura-0.0.6.tgz#5cc3f0b8a800358f422436b99afc8b050a336691"
+  integrity sha512-9GtVP/wNOQ8AU1/8WOod2+Eao4R/RA+lfld2XMEShPSNF+9AHlnR3LJlUa3bhDJjNy7bIJUz94HmVyUGpYx81A==
 
 vuetify@^2.4.0:
   version "2.5.14"

@@ -5,6 +5,10 @@ import router from '../router';
 const state = {
   authenticating: false,
   accessToken: TokenService.getToken(),
+  roles: TokenService.getRoles(),
+  email: '',
+  name: '',
+  isVerified: false,
   authenticationErrorCode: 0,
   authenticationError: '',
   authenticationSuccess: false,
@@ -17,6 +21,9 @@ const state = {
 const getters = {
   loggedIn: (state) => {
     return state.accessToken ? true : false;
+  },
+  inRole: (state) => (role) => {
+    return state.roles.includes(role);
   },
 
   authenticationErrorCode: (state) => {
@@ -42,8 +49,8 @@ const actions = {
   async login({ commit }, { email, password }) {
     commit('loginRequest');
     try {
-      const token = await UserService.login(email, password);
-      commit('loginSuccess', token);
+      const userData = await UserService.login(email, password);
+      commit('loginSuccess', userData);
       // Redirect the user to the page he first tried to visit or to the home view
       router.push(router.history.current.query.redirect || '/');
 
@@ -105,8 +112,12 @@ const mutations = {
     state.registerErrorCode = 0;
   },
 
-  loginSuccess(state, accessToken) {
-    state.accessToken = accessToken;
+  loginSuccess(state, userData) {
+    state.accessToken = userData.jwtToken;
+    state.roles = userData.roles;
+    state.email = userData.email;
+    state.name = userData.name;
+    state.isVerified = userData.isVerified;
     state.authenticationSuccess = true;
     state.authenticating = false;
   },

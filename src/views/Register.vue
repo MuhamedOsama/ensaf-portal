@@ -13,7 +13,7 @@
         <h2 class="ml-4">Ensaf</h2>
       </v-card-title>
       <v-card-text>
-        <v-stepper v-model="stepper" flat color="grey lighten-4">
+        <v-stepper v-model="stepper" color="grey lighten-4">
           <v-stepper-items>
             <v-stepper-content step="1" class="grey lighten-4">
               <v-form v-model="valid" auto class="grey lighten-4">

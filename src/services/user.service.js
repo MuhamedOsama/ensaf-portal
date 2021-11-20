@@ -31,10 +31,10 @@ const UserService = {
       if (response.status != 200) {
         throw Error('Unauthorized Account');
       }
-      const accessToken = response.data.jwtToken;
-      TokenService.saveToken(accessToken);
+      const userData = response.data;
+      TokenService.saveToken(userData.jwtToken, userData.roles);
       ApiService.setHeader();
-      return accessToken;
+      return userData;
     } catch (error) {
       console.log('Login Failed');
       throw new AuthenticationError(

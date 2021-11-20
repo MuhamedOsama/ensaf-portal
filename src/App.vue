@@ -1,6 +1,6 @@
 <template>
   <v-app id="inspire">
-    <v-app-bar app color="gray" flat v-if="loggedIn">
+    <v-app-bar app color="gray" v-if="loggedIn" flat>
       <v-container class="py-0 fill-height">
         <v-avatar class="mr-10" color="grey darken-1" size="32"></v-avatar>
         <h2 class="text-gray mr-4">Ensaf</h2>
@@ -10,14 +10,15 @@
         </v-btn>
         <v-spacer></v-spacer>
         <v-btn
-          :to="actionLink.link"
-          flat
+          :to="routeAction"
           color="blue-grey darken-2"
           dark
           elevation="2"
-          >{{ actionLink.text }}</v-btn
+          >{{
+            inRole("Commissioner") ? "Create A Project" : "Submit A Claim"
+          }}</v-btn
         >
-        <v-btn text flat class="ml-2" @click="logout">Logout</v-btn>
+        <v-btn text class="ml-2" @click="logout">Logout</v-btn>
 
         <!-- <v-responsive max-width="260">
           <v-text-field
@@ -31,7 +32,7 @@
       </v-container>
     </v-app-bar>
 
-    <v-content>
+    <v-main>
       <v-container class="fill-height" fluid>
         <v-row align="center" justify="center">
           <v-fade-transition mode="out-in" hide-on-leave>
@@ -39,7 +40,7 @@
           </v-fade-transition>
         </v-row>
       </v-container>
-    </v-content>
+    </v-main>
   </v-app>
 </template>
 
@@ -240,6 +241,7 @@ export default {
         this.snackbar = true;
       });
     },
+
     closeDialog() {
       this.customNotification = {
         title: null,
@@ -252,11 +254,18 @@ export default {
   },
 
   computed: {
-    ...mapGetters("auth", ["loggedIn"]),
+    ...mapGetters("auth", ["loggedIn", "inRole"]),
     ...mapGetters("socket", ["notifications"]),
     bellContent() {
       // console.log(this.notifications.length);
       return this.notifications.length;
+    },
+    routeAction() {
+      if (this.inRole("Commissioner")) {
+        return "CreateProject";
+      } else {
+        return "SubmitClaim";
+      }
     },
     mini() {
       switch (this.$vuetify.breakpoint.name) {
